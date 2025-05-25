@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biodata Diri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 0 20px;
+            background: #ADD8E6;
+            color: #111827;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1f2937;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav button {
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #778899;
+            border: none;
+            color: #111827;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        nav button:hover {
+            background: white;
+        }
+        section {
+            display: none;
+            background: #A9A9A9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            color: #111827;
+        }
+    </style>
+</head>
+<body>
+    <h1>Biodata Diri</h1>
+    <nav>
+        <button onclick="showPage('biodata')">Biodata</button>
+        <button onclick="showPage('hobi')">Hobi</button>
+        <button onclick="showPage('kontak')">Kontak</button>
+    </nav>
+
+    <section id="biodata" class="active">
+        <h2 align = "center">Biodata Leinard Nabil</h2>
+        <p><strong>Nama Lengkap :</strong> Leinard Nabil</p>
+        <p><strong>Nama Panggilan :</strong> Nabil</p>
+        <p><strong>Tempat Tanggal Lahir :</strong> Jakarta, 18 September 2009</p>
+        <p><strong>Jurusan :</strong> X PPLG</p>
+        <p><strong>Alamat :</strong> Jl.Cendrawasih Rt 001/Rw 006 Cipayung, Ciputat</p>
+    </section>
+
+    <section id="hobi">
+      <h2 align = "center">Hobi</h2>
+       <table border="2" cellspacing="0" align="center" cellpadding="6" width="500" bgcolor="white">
+        <tr align="center" bgcolor="#00BFFF">
+         <td><strong>Hobi</strong></td>
+         <td><strong>Foto</strong></td>
+        <tr>
+   
+        <tr>
+         <td align="center"><b>Badminton</b></td>
+         <td><img src="badminton.jpg" height="10%" width="250"></td>
+        <tr>
+       
+        <tr>
+         <td align="center"><b>Bermain Mobile Legends</b></td>
+         <td><img src="game.jpg" height="10%" width="250"></td>
+        <tr>
+       
+      </table>
+    </section>
+
+    <section id="kontak">
+        <h2 align = "center">Kontak</h2>
+        <p><strong>Email: </strong><a href="mailto:leinardabil181@gmail.com">leinardabil181@gmail.com</a></p>
+        <p><strong>Telepon: </strong><a href="https://wa.me/+6281290866310">Whatsapp</a></p>
+        <p><strong>Instagram: </strong><a href="https://www.instagram.com/leinrdn?igsh=Z200M2I2cmxpYWlk">Instagram</a></p>
+    </section>
+
+    <script>
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const selected = document.getElementById(pageId);
+            if(selected) {
+                selected.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
